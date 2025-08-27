@@ -17,15 +17,18 @@ potenciar (num1,exp){
     return num**exp;
 }
 raizCuadrada(num){
-    Math.sqrt(num);
+    return Math.sqrt(num);
 }
-
+raziCubica(num){
+    return Math.cbrt(num);
+}
+    
 }
 
 const calculadora = new Calculadora();
 
 alert ("¿Que operación deseas realizar?");
-operacion = prompt("1: suma, 2: resta, 3: división, 4: multiplciación, 5: potenciación")
+operacion = prompt("1: suma, 2: resta, 3: división, 4: multiplciación, 5: potenciación, 6: raíz cuadrada, 6: raíz cúbica")
 
 if (operacion == 1){
     let numero1 =prompt ("Primer número para sumar");
@@ -53,8 +56,18 @@ else if  (operacion == 4) {
 }
 else if  (operacion == 5) {
     let numero1 =prompt ("Numero a potenciar");
-    let numero2 =prompt ("Exponente");
+    let exp =prompt ("Exponente");
     resultado = calculadora.potenciar(numero1,exp);
+    alert(`tu resultado es ${resultado}`);
+}
+else if  (operacion == 6) {
+    let numero1 =prompt ("Conocer la raíz cuadrada de:");
+    resultado = calculadora.raizCuadrada(numero1);
+    alert(`tu resultado es ${resultado}`);
+}
+else if  (operacion == 7) {
+    let numero1 =prompt ("Conocer la raíz cúbica de:");
+    resultado = calculadora.raziCubica(numero1);
     alert(`tu resultado es ${resultado}`);
 }
 else {
