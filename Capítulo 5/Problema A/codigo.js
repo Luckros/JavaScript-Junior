@@ -34,7 +34,7 @@ const aprobo = ()=> {
         if (trabajos >=3 ) {
             console.log("c%   Trabajos en orden","color:green")
             } else {
-            console.log("c%   Falta de trabajos","color:red");
+            console.log("c%   Falta de trab ajos","color:red");
         }
         }
     }
